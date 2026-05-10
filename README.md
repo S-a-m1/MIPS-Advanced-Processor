@@ -63,16 +63,6 @@ The memory file (`vmemfile.dat`) is plain hex, one 32-bit word per line. Unspeci
 
 ---
 
-## Hazard Scheduling
-
-The vector register file has no hardware forwarding. Software must insert NOPs between dependent vector instructions:
-
-- **VLW → VADD** — 3 NOPs required
-- **VADD → VSW** — 3 NOPs required
-- **ADDI → BEQ** (same register) — handled automatically by hardware (1 bubble)
-
----
-
 ## File Overview
 
 | File | Description |
